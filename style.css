@@ -34,18 +34,28 @@ body {
 
 /* Content Area */
 
-.grid-area {
-    width: 960px;
-    height: 480px;
-}
-
 .content {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
     background-color: var(--red);
     border-radius: 10px;
 }
 
+.upper {
+    border-radius: 10px;
+}
+.grid-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .lower {
     display: flex;
+    justify-self: end;
     justify-content: space-evenly;
 }
 
@@ -66,6 +76,14 @@ body {
     width: 100px;
     background-color: var(--white);
     border-radius: 50%;
+}
+
+.grid {
+    cursor: crosshair;
+    height: 20px;
+    width: 20px;
+    border: 0.25px solid var(--light-grey);
+    background-color: var(--white);   
 }
 
 /* Footer */
