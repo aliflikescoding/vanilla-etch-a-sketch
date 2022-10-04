@@ -30,6 +30,46 @@ body {
     flex-direction: column;
 }
 
+/*Header*/
+
+/* Content Area */
+
+.grid-area {
+    width: 960px;
+    height: 480px;
+}
+
+.content {
+    background-color: var(--red);
+    border-radius: 10px;
+}
+
+.lower {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lower p {
+    font-family: 'Pacifico', cursive;
+    margin: auto 150px;
+    font-size: 200%;
+    color: var(--gold);
+}
+
+.circle {
+    cursor: pointer;
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background-color: var(--white);
+    border-radius: 50%;
+}
+
+/* Footer */
+
 .footer {
     justify-self: end;
     display: flex;
