@@ -30,3 +30,11 @@ body {
     flex-direction: column;
 }
 
+.footer {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px
+}
+
