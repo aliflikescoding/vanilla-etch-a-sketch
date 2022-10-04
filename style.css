@@ -5,3 +5,13 @@
 font-family: 'Pacifico', cursive;
 font-family: 'Poppins', sans-serif;
 */
+
+/* Variables */
+:root {
+    --red: #c54847;
+    --gold: #fbad50;
+    --yellow: #eace15;
+    --light-blue: #32a8bf;
+    --light-grey: #aaaaaa;
+    --white: #ffffff;
+}
