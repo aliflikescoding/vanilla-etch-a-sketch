@@ -15,14 +15,17 @@ for (let i = 1; i <= gridWidth; i++) {
     gridArea.appendChild(gridCol);
 }
 
-/* erase */
+/* Eraser or Pencil */
 const eraseButton = document.querySelector('#circle2');
+eraseButton.textContent = 'Pencil';
 eraseButton.addEventListener('click', () => {
     if (eraseButton.classList.contains('erase') == false) {
         eraseButton.classList.add('erase');
+        eraseButton.textContent = 'Eraser';
     }
     else {
         eraseButton.classList.remove('erase');
+        eraseButton.textContent = 'Pencil';
     }
 });
 
