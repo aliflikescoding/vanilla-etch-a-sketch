@@ -13,6 +13,7 @@ font-family: 'Poppins', sans-serif;
     --yellow: #eace15;
     --light-blue: #32a8bf;
     --light-grey: #aaaaaa;
+    --black: #000000;
     --white: #ffffff;
 }
 
@@ -47,6 +48,7 @@ body {
 .upper {
     border-radius: 10px;
 }
+
 .grid-area {
     display: flex;
     justify-content: center;
@@ -86,6 +88,11 @@ body {
     background-color: var(--white);   
 }
 
+.grid-fill {
+    background-color: var(--black);
+    border: none;
+}
+
 /* Footer */
 
 .footer {
@@ -95,4 +102,3 @@ body {
     justify-content: center;
     gap: 8px
 }
-
