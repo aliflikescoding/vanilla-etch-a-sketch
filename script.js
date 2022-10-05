@@ -39,3 +39,13 @@ grids.forEach(grid => {
     });
 });
 
+/* Clear the board */
+const clearButton = document.querySelector('#circle1');
+clearButton.addEventListener('click', () => {
+    grids.forEach(grid => {
+        if (grid.classList.contains('grid-fill')) {
+            grid.classList.remove('grid-fill');
+        }
+    })
+});
+
