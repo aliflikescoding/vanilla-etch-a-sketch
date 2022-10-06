@@ -1,19 +1,23 @@
 
-const gridHeight = 16;
-const gridWidth = 16;
+let numberOfGrids = 16;
 
 /* Generate Grids */
 const gridArea = document.querySelector('.grid-area');
-for (let i = 1; i <= gridWidth; i++) {
+const gridAreaSize = gridArea.clientHeight;
+for (let i = 1; i <= numberOfGrids; i++) {
     const gridCol = document.createElement('div');
-    gridCol.classList.add('gridCol');
-    for (let j = 1; j <= gridHeight; j++) {
-        const grid = document.createElement('div');
+    gridCol.classList.add('grid-column') 
+    for (let j = 1; j <= numberOfGrids; j++) {
+        const grid = document.createElement('div')
         gridCol.appendChild(grid);
         grid.classList.add('grid');
+        let x = gridAreaSize/numberOfGrids;
+        grid.style.width = `${x}px`;
+        grid.style.height = `${x}px`;      
     }
     gridArea.appendChild(gridCol);
 }
+console.log(gridAreaSize);
 
 /* Eraser or Pencil */
 const eraseButton = document.querySelector('#circle2');
