@@ -39,6 +39,8 @@ body {
     display: flex;
     padding: 25px;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: fit-content;
     height: fit-content;
     background-color: var(--red);
@@ -59,11 +61,11 @@ body {
     display: flex;
     justify-self: end;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .lower p {
     font-family: 'Pacifico', cursive;
-    margin: auto 150px;
     font-size: 200%;
     color: var(--gold);
 }
