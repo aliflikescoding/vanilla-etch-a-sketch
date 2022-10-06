@@ -34,6 +34,9 @@ body {
 }
 
 /*Header*/
+.header {
+    font-size: 200%;
+}
 
 /* Content Area */
 
@@ -112,5 +115,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px
+    gap: 8px;
+    font-size: 175%;
+    margin: 25px auto;
 }
