@@ -36,6 +36,20 @@ body {
 /*Header*/
 .header {
     font-size: 200%;
+    margin: 25px auto;
+}
+
+.header button {
+    font-size: 60%;
+    font-weight: bold;
+    padding: 25px;
+    border-radius: 5px;
+    border: 2px solid var(--white);
+    display: flex;
+    color: var(--white);
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Content Area */
