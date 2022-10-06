@@ -37,6 +37,10 @@ body {
 .header {
     font-size: 200%;
     margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .header button {
