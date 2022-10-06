@@ -29,6 +29,8 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: var(--light-blue);
+    color: var(--white);
 }
 
 /*Header*/
@@ -45,6 +47,7 @@ body {
     height: fit-content;
     background-color: var(--red);
     border-radius: 10px;
+    color: var(--black);
 }
 
 .upper {

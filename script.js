@@ -1,6 +1,6 @@
 
-const gridHeight = 64;
-const gridWidth = 64;
+const gridHeight = 16;
+const gridWidth = 16;
 
 /* Generate Grids */
 const gridArea = document.querySelector('.grid-area');
