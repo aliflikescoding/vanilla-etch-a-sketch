@@ -54,6 +54,12 @@ body {
     background-color: transparent;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+}
+
+.header button:hover {
+    transform: scale(.99);
+    opacity: 95%;
 }
 
 /* Content Area */
