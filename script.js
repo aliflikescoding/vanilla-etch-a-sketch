@@ -1,4 +1,4 @@
-
+/* Variables */
 var numberOfGrids = 16;
 const gridArea = document.querySelector('.grid-area');
 const changeButton = document.querySelector('#grid-size-button');
@@ -8,6 +8,7 @@ const eraseButton = document.querySelector('#circle2');
 
 /* -- Generate Grids For Page  -- */
 generateGrids();
+// grid variables
 const grids = document.querySelectorAll('.grid');
 
 /* -- Eraser or Pencil feature -- */
