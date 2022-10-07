@@ -1,9 +1,42 @@
 
 var numberOfGrids = 16;
-
-/* Generate Grids */
 const gridArea = document.querySelector('.grid-area');
 const gridAreaSize = gridArea.clientHeight;
+
+/* -- Generate Grids For Page  -- */
+generateGrids();
+
+const eraseButton = document.querySelector('#circle2');
+const grids = document.querySelectorAll('.grid');
+const clearButton = document.querySelector('#circle1');
+const changeButton = document.querySelector('#grid-size-button');
+
+/* -- Eraser or Pencil feature -- */
+eraseButton.textContent = 'Pencil';
+eraseButton.addEventListener('click', () => {
+    eraserOrPencil(eraseButton);
+});
+
+/* -- Fill in the grids feature -- */
+grids.forEach(grid => {
+    fill(grid);
+});
+
+/* -- Clear Board feature -- */
+clearButton.addEventListener('click', () => {
+    grids.forEach(grid => {
+        clear(grid);
+    })
+});
+
+/* -- Change Grid Size feature -- */
+changeButton.addEventListener('click', () => {
+    pickNewSize();
+});
+
+/* -- Functions -- */
+
+// generate grids
 function generateGrids() {
     for (let i = 1; i <= numberOfGrids; i++) {
         const gridCol = document.createElement('div');
@@ -19,79 +52,14 @@ function generateGrids() {
         gridArea.appendChild(gridCol);
     }
 }
-generateGrids();
-
-/* Button to Change grid size */
-const changeButton = document.querySelector('#grid-size-button');
-changeButton.addEventListener('click', () => {
-    let foo = parseInt(prompt('Enter a number between 1 and 100'));
-    if (foo >= 1 && foo <= 100) {
-        changeSize(foo);
-    }
-    else {
-        alert(`ERROR: input is not a number between 1 and 100`);
-    }
-});
-
+// remove all child nodes of a div
 function removeAllChildNodes(parent) {
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);
     }
 }
-
-/* function to change the size of the board */
-function changeSize(size) {
-    removeAllChildNodes(gridArea);
-    numberOfGrids = size;
-    generateGrids();
-
-    /*
-    Same function as below but copy and pasted
-    here so that the new grid has access to the functions
-    */
-
-    /* Eraser or Pencil */
-    const eraseButton = document.querySelector('#circle2');
-    eraseButton.textContent = 'Pencil';
-    eraseButton.addEventListener('click', () => {
-        if (eraseButton.classList.contains('erase') == false) {
-            eraseButton.classList.add('erase');
-            eraseButton.textContent = 'Eraser';
-        }
-        else {
-            eraseButton.classList.remove('erase');
-            eraseButton.textContent = 'Pencil';
-        }
-    });
-
-    /* change fill if hovered */
-    const grids = document.querySelectorAll('.grid');
-    grids.forEach(grid => {
-        grid.addEventListener('mouseover', () => {
-            if (eraseButton.classList.contains('erase')) {
-                grid.classList.remove('grid-fill')
-            }
-            else {
-                grid.classList.add('grid-fill');
-            }
-        });
-    });
-
-    /* Clear the board */
-    const clearButton = document.querySelector('#circle1');
-    clearButton.addEventListener('click', () => {
-        grids.forEach(grid => {
-            if (grid.classList.contains('grid-fill')) {
-                grid.classList.remove('grid-fill');
-            }
-        })
-    });
-}
-
-/* Eraser or Pencil */
-const eraseButton = document.querySelector('#circle2');
-eraseButton.textContent = 'Pencil';
-eraseButton.addEventListener('click', () => {
+// eraser or pencil
+function eraserOrPencil(eraseButton) {
     if (eraseButton.classList.contains('erase') == false) {
         eraseButton.classList.add('erase');
         eraseButton.textContent = 'Eraser';
@@ -100,11 +68,9 @@ eraseButton.addEventListener('click', () => {
         eraseButton.classList.remove('erase');
         eraseButton.textContent = 'Pencil';
     }
-});
-
-/* change fill if hovered */
-const grids = document.querySelectorAll('.grid');
-grids.forEach(grid => {
+}
+// fill
+function fill(grid) {
     grid.addEventListener('mouseover', () => {
         if (eraseButton.classList.contains('erase')) {
             grid.classList.remove('grid-fill')
@@ -113,16 +79,39 @@ grids.forEach(grid => {
             grid.classList.add('grid-fill');
         }
     });
-});
+}
+// clear
+function clear(grid) {
+    if (grid.classList.contains('grid-fill')) {
+        grid.classList.remove('grid-fill');
+    }
+}
+// pick new size of the grid
+function pickNewSize() {
+    let foo = parseInt(prompt('Enter a number between 1 and 100'));
+    if (foo >= 1 && foo <= 100) {
+        changeSize(foo);
+    }
+    else {
+        alert(`ERROR: input is not a number between 1 and 100`);
+    }
+}
+// change the size fo the board
+function changeSize(size) {
+    removeAllChildNodes(gridArea);
+    numberOfGrids = size;
+    generateGrids();
 
-/* Clear the board */
-const clearButton = document.querySelector('#circle1');
-clearButton.addEventListener('click', () => {
+    const grids = document.querySelectorAll('.grid');
+    const eraseButton = document.querySelector('#circle2');
+
     grids.forEach(grid => {
-        if (grid.classList.contains('grid-fill')) {
-            grid.classList.remove('grid-fill');
-        }
+        fill(grid);
     })
-});
 
-
+    clearButton.addEventListener('click', () => {
+        grids.forEach(grid => {
+            clear(grid);
+        })
+    });
+}
