@@ -1,15 +1,14 @@
 
 var numberOfGrids = 16;
 const gridArea = document.querySelector('.grid-area');
+const changeButton = document.querySelector('#grid-size-button');
 const gridAreaSize = gridArea.clientHeight;
+const clearButton = document.querySelector('#circle1');
+const eraseButton = document.querySelector('#circle2');
 
 /* -- Generate Grids For Page  -- */
 generateGrids();
-
-const eraseButton = document.querySelector('#circle2');
 const grids = document.querySelectorAll('.grid');
-const clearButton = document.querySelector('#circle1');
-const changeButton = document.querySelector('#grid-size-button');
 
 /* -- Eraser or Pencil feature -- */
 eraseButton.textContent = 'Pencil';
