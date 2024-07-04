@@ -1,10 +1,10 @@
 <p align="center">
-  <h1 align="center">Calculator Project in Vanilla HTML, Javascript, and CSS</h1>
+  <h1 align="center">Etch a sketch Project in Vanilla HTML, Javascript, and CSS</h1>
 </p>
 
 ## Output
 
-Visit [The Live Page](https://aliflikescoding.github.io/vanilla-calculator/) to view the details
+Visit [The Live Page](https://aliflikescoding.github.io/vanilla-etch-a-sketch/) to view the details
 
 ## Description
 
