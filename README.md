@@ -1,8 +1,30 @@
+<p align="center">
+  <h1 align="center">Calculator Project in Vanilla HTML, Javascript, and CSS</h1>
+</p>
 
-# Etch A Sketch
+## Output
 
-An asinged project in The Odin Project. I got the idea from the classic etch a sketch toy and also a couple of people from the odin project course 
+Visit [The Live Page](https://aliflikescoding.github.io/vanilla-calculator/) to view the details
 
-## Live Preview
-[Live](https://aliflikescoding.github.io/etch_a_sketch_project/)
+## Description
+
+An asinged project in The Odin Project Course. It's an etch a sketch where you can draw stuff on them in this project I learned the basic skills of dom manipulation/selection and css
+
+---
+## 🖥️ Technologies
+
+In this project we used vast amount of modern technologies such as:
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  
+## 📖 Additional information
+
+### 📋 Requirements
+
+something to go live in the html in
+
+
+
 
